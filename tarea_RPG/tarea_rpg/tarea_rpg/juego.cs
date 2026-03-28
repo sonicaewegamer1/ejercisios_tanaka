@@ -55,6 +55,21 @@ namespace tarea_rpg
                     enemigo.HP = enemigo.HP - 20;
                 }
                 Console.WriteLine("HP del enemigo: " + enemigo.HP);
+                // enemigo contraataca SOLO si sigue vivo
+                if (enemigo.HP > 0)
+                {
+                    int daño = enemigo.Atacar();
+                    hp = hp - daño;
+
+                    Console.WriteLine("El enemigo te ataca!" + daño + " HP)");
+                    Console.WriteLine("Tu HP: " + hp);
+                }
+                // si te quedas sin hp mueres
+                if (hp <= 0)
+                {
+                    Console.WriteLine("Has sido derrotado 💀");
+                    this.Fin = true;
+                }
 
                 if (enemigo.HP <= 0)
                 {
@@ -63,6 +78,7 @@ namespace tarea_rpg
                     this.Fin = true;
                     this.Win = true;
                 }
+
             }
             if (!this.Win)
             {

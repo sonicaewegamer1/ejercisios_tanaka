@@ -9,5 +9,9 @@ namespace tarea_rpg
     internal class Enemy
     {
         public int HP { get; set; }
+        public int Atacar()
+        {
+            return 15; // daño que aflige el enemigo
+        }
     }
 }
