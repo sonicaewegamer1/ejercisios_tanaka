@@ -27,7 +27,12 @@ namespace tarea_rpg
         }
         public void Run()
         {
+            Console.WriteLine("Ingresa tu vida (HP):");
+            int hp = Convert.ToInt32(Console.ReadLine());
+            Enemy enemigo = new Enemy();
+            enemigo.HP = 50; // vida del NPC
             while (this.Fin == false)
+
             {
                 Console.WriteLine("elige un arma: arco(1) o espada(2)");
                 int number = Convert.ToInt32(Console.ReadLine());
@@ -47,7 +52,7 @@ namespace tarea_rpg
                 }
 
             }
-            Console.WriteLine("adiós");
+            Console.WriteLine("no es una opción valida, adiós");
 
         }
     }
