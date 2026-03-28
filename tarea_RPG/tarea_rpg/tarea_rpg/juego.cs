@@ -82,7 +82,7 @@ namespace tarea_rpg
             }
             if (!this.Win)
             {
-                Console.WriteLine("no es una opción valida, adiós");
+                Console.WriteLine("adiós");
             }
 
         }
