@@ -37,7 +37,7 @@ namespace tarea_rpg
                 if (number > 2)
                     this.Fin = true;
 
-                if (number = 1)
+                if (number == 1)
                 {
                     Console.WriteLine(" has elegido el arco" + number);
                 }
