@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace tarea_rpg
 {
-    internal class Class1
+    internal class Enemy
     {
+        public int HP { get; set; }
     }
 }

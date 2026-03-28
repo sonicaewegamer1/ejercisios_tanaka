@@ -11,11 +11,13 @@ namespace tarea_rpg
     {
         //variable
         bool Fin;
+        bool Win;// :D
         // funciones provadas
         private void  InitVariables()
         {
             
             this.Fin = false;
+            this.Win = false;
         }
         public juego()
         {
@@ -41,18 +43,31 @@ namespace tarea_rpg
                     this.Fin = true;
                 if (number > 2)
                     this.Fin = true;
-
+                //ola profe
                 if (number == 1)
                 {
-                    Console.WriteLine(" has elegido el arco" + number);
+                    Console.WriteLine("has elegido el arco, ¡disparas!" + number);
+                    enemigo.HP = enemigo.HP - 10;
                 }
                 else
                 {
-                    Console.WriteLine(" has elegido la espada" + number);
+                    Console.WriteLine("has elegido la espada ¡rebanas!" + number);
+                    enemigo.HP = enemigo.HP - 20;
                 }
+                Console.WriteLine("HP del enemigo: " + enemigo.HP);
 
+                if (enemigo.HP <= 0)
+                {
+                    Console.WriteLine("El enemigo ha sido derrotado 💀");
+                    Console.WriteLine("¡Has ganado! :D");
+                    this.Fin = true;
+                    this.Win = true;
+                }
             }
-            Console.WriteLine("no es una opción valida, adiós");
+            if (!this.Win)
+            {
+                Console.WriteLine("no es una opción valida, adiós");
+            }
 
         }
     }
